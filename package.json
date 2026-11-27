@@ -9,7 +9,13 @@
     "lint": "oxlint",
     "preview": "vite preview",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "prepare": "husky",
+    "branch:new": "node scripts/branch/new.mjs",
+    "agent:resume": "node scripts/agents/manager.mjs resume",
+    "agent:handoff": "node scripts/agents/manager.mjs handoff",
+    "release:check": "node scripts/release/check.mjs",
+    "precommit": "node scripts/git-hooks/pre-commit.mjs"
   },
   "dependencies": {
     "@tauri-apps/api": "^2.12.0",
@@ -22,6 +28,7 @@
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^6.1.2",
+    "husky": "^9.1.7",
     "oxlint": "^1.90.0",
     "typescript": "~7.0.2",
     "vite": "^8.3.6",
