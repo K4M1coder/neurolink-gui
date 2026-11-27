@@ -1,0 +1,8 @@
+repos:
+  - repo: local
+    hooks:
+      - id: neurolink-branch-governance
+        name: NeuroLink branch governance
+        entry: node scripts/git-hooks/pre-commit.mjs
+        language: system
+        pass_filenames: false

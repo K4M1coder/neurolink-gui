@@ -39,3 +39,30 @@ corepack pnpm build
 
 The Rust process runner is under `src-tauri/src/lib.rs`. The GUI passes
 arguments as a process array and never evaluates command text in a shell.
+
+## Repository governance
+
+This repository is governed by
+[.specify/memory/constitution.md](.specify/memory/constitution.md). Coding
+agents must also follow [AGENTS.md](AGENTS.md).
+
+Resume work with:
+
+```bash
+pnpm agent:resume
+```
+
+Create a domain-owned branch with:
+
+```bash
+pnpm branch:new feature cli-runtime alice fix-stream-cancel
+```
+
+Install local hooks:
+
+```bash
+corepack pnpm prepare
+python -m pre_commit install
+```
+
+The hook policy is progressively stricter for release and hotfix branches.
